@@ -49,7 +49,7 @@
             evt.preventDefault();
 
             axios
-                .post(`${baseUrl}/api/students`, { name: nameInput.value })
+                .post(`/api/students`, { name: nameInput.value })
                 .then(res => {
                     putTheThingInTheView(res)
                 })
@@ -71,7 +71,7 @@
 
         // get student list on initial load
         axios
-            .get(`${baseUrl}/api/students`)
+            .get(`/api/students`)
             .then(res => {
                 putTheThingInTheView(res)
             })
